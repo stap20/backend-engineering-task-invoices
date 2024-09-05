@@ -1,11 +1,11 @@
-import { Injectable, Logger, LogLevel } from '@nestjs/common';
+import { Injectable, Logger } from '@nestjs/common';
 
 @Injectable()
 export class LoggingService {
   private readonly logger = new Logger(LoggingService.name);
 
   log(message: string, context?: string) {
-    this.logger.log(message);
+    this.logger.log(message, context);
   }
 
   error(message: string, trace: string, context?: string) {

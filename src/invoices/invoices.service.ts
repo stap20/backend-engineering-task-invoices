@@ -38,7 +38,7 @@ export class InvoicesService {
         'Error occurred while creating invoice',
         error.stack,
       );
-      
+
       throw error;
     }
   }

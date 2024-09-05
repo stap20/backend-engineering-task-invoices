@@ -1,85 +1,128 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# PAYEVER | BACK-END ASSIGNMENT | INVOICE
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This project was developed as part of a challenge proposed by Payever for the position of Back-end Engineer. It involves creating a simple REST application from scratch using Nest.js, TypeScript, MongoDB, RabbitMQ,
+## Content
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+1. [Getting Started](#getting-started)
+    - [Requirements](#requirements)
+2. [Download and Installation](#download-and-installation)
+3. [API Resources](#api-resources)
+    - [Endpoints](#endpoints)
+4. [Automated Tests](#automated-tests)
+5. [Technologies](#technologies)
+6. [Acknowledgments](#acknowledgments)
 
-## Description
+## Getting Started
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+The following instructions will help you get a copy of this project up and running on your local machine. You will be able to test it in both Production and Development modes.
 
-## Project setup
+Below you will find relevant information about the API resources available (its endpoints) as well as the main technologies used to build it.
 
-```bash
-$ npm install
-```
+### Requirements
 
-## Compile and run the project
+You need to install the following technologies:
 
-```bash
-# development
-$ npm run start
+- [Node.js](https://nodejs.org/en/download/) - JavaScript runtime built on Chrome's V8 JavaScript engine.
+- [MongoDB](https://www.mongodb.com/try/download/community) - Document-oriented database program.
+- [RabbitMQ](https://www.rabbitmq.com/download.html) - Open-source message-broker software.
+- [Nest.js](https://nestjs.com/) - A progressive Node.js framework to build scalable and testable applications.
 
-# watch mode
-$ npm run start:dev
+For MongoDB, you can use its Atlas service to avoid installing it locally. You can access it [here](https://www.mongodb.com/atlas/database).
 
-# production mode
-$ npm run start:prod
-```
+## Download and Installation
 
-## Run tests
+Make sure you have Git installed on your machine. Clone this project using the following command:
 
-```bash
-# unit tests
-$ npm run test
+bash
 
-# e2e tests
-$ npm run test:e2e
+Copy code
 
-# test coverage
-$ npm run test:cov
-```
+`git clone https://github.com/stap20/backend-engineering-task-invoices.git cd backend-engineering-task-invoices`
 
-## Resources
+After cloning the repository, install the dependencies:
 
-Check out a few resources that may come in handy when working with NestJS:
+bash
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+Copy code
 
-## Support
+`npm install`
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Configure your environment variables by updating `.env` file with the values as necessary:
 
-## Stay in touch
+Start the application in development mode using:
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+bash
 
-## License
+Copy code
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+`npm run start:dev`
+
+The application will run on port 3000. You can now start sending requests or running tests.
+
+## API Resources
+
+You can use an HTTP client like Insomnia, Postman, or the Thunder Client extension in VS Code to interact with this application.
+
+### Endpoints
+
+- **POST /invoices**
+    
+    - Creates a new invoice entry in the database. Accepts invoice details in the request body and returns the created invoice. If creation fails, it logs the error and returns a 500 Internal Server Error.
+- **GET /invoices/{id}**
+    
+    - Retrieves a specific invoice by its ID. Returns the invoice details in JSON format. If the invoice with the provided ID is not found, it logs the error and returns a 404 Not Found.
+- **GET /invoices/?startDate=&endDate=**
+    
+    - Retrieves a list of invoices with optional filters. Accepts query parameters for filtering invoices, such as date ranges. Returns a list of invoices that match the filters. If fetching invoices fails, it logs the error and returns a 500 Internal Server Error.
+    - 
+## Automated Tests
+
+Unit and end-to-end (e2e) tests are included in the project to ensure the functionality and stability of the application.
+
+- **Unit Tests:** Located next to the corresponding code files. These tests verify individual components and functions in isolation.
+- **End-to-End (e2e) Tests:** Found in the `test` folder, specifically in `invoices.controller.e2e-spec.ts`. These tests simulate HTTP requests to validate the behavior of the application's endpoints.
+
+### Running the Tests
+
+To run the unit and e2e tests, use:
+
+bash
+
+Copy code
+
+`npm run test`
+
+### Running End-to-End Tests
+
+To specifically run e2e tests, use:
+
+bash
+
+Copy code
+
+`npm run test:e2e`
+
+### Test Coverage
+
+To generate a test coverage report, use:
+
+bash
+
+Copy code
+
+`npm run test:cov`
+
+This will provide details on the coverage of your unit tests, including which parts of the code are tested and which are not.
+## Technologies
+
+Main technologies used in this project:
+
+- **Node.js** - A JavaScript runtime built on Chrome's V8 JavaScript engine.
+- **Nest.js** - A progressive Node.js framework to build highly scalable and testable applications.
+- **MongoDB** - A document-oriented database program.
+- **TypeScript** - A strongly typed programming language that builds on JavaScript.
+- **RabbitMQ** - An open-source message-broker software.
+
+## Acknowledgments
+
+I’d like to thank Payever and its representatives for providing this challenge. The project was a great opportunity to work with new technologies and apply my skills in building scalable applications.

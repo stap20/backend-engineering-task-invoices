@@ -1,11 +1,9 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { InvoicesService } from '../invoices.service';
 import { LoggingService } from '../logging.service';
-import { Model } from 'mongoose';
 import { getModelToken } from '@nestjs/mongoose';
 import { Invoice } from '../schemas/invoice.schema';
 import { CreateInvoiceDto } from '../dto/create-invoice.dto';
-import { FilterInvoicesDto } from '../dto/filter-invoices.dto';
 
 import {
   InternalServerErrorException,
@@ -15,8 +13,6 @@ import {
 
 describe('InvoicesService', () => {
   let service: InvoicesService;
-  let loggingService: LoggingService;
-  let invoiceModel: Model<Invoice>;
 
   const mockInvoiceModel = {
     create: jest.fn(),
@@ -50,8 +46,6 @@ describe('InvoicesService', () => {
     }).compile();
 
     service = module.get<InvoicesService>(InvoicesService);
-    loggingService = module.get<LoggingService>(LoggingService);
-    invoiceModel = module.get<Model<Invoice>>(getModelToken(Invoice.name));
   });
 
   describe('create', () => {
